@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url('./public/resimler/tedavi.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family:  cursive;
+        font-weight: bold;
+      }
+
+      
+
+      header {
+    height: 100px;
+    
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header nav .logo a {
+    color: rgba(249, 249, 249, 0.912);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    column-gap: 30px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+nav .menu {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+}
+
+    </style>
+   
+  </head>
+
+  <body>
+    <header class="container">
+        <nav>
+
+            <%- include("../partials/menu")%>
+
+
+        </nav>
+    </header>
+    <h2> <br> <br> <br> <br> SKOLYOZ TEDAVİSİ</h2> 
+    <p>
+       
+        Skolyoz tedavisi, gözlem, egzersiz ve ortez uygulamalarını içermektedir. Uygulanan egzersiz yaklaşımının skolyozda etkili olabilmesi için ise üç boyutlu aktif düzeltme içermesi gerekir. 2011’de Uluslararası Skolyoz Ortopedik Tedavi ve Rehabilitasyon Derneği (Society on Scoliosis Orthopaedic and Rehabilitation Treatment-SOSORT) tarafından kabul edilen, dünya çapında uygulanan ve etkinliği kanıtlanmış skolyoza özel fizyoterapi egzersizleri içeren eğitimler şunlardır:
+        <br>
+<br>
+Schroth Method
+<br>
+Schroth Best Practice
+<br>
+Lyon
+<br>
+SEAS
+<br>
+BSPTS
+<br>
+DoboMed
+<br>
+Side Shift
+<br>
+FITS
+
+       
+         </p>
+ </body>
+</html>

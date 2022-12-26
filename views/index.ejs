@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="skolyoz, schroth, fizik tedavi">
+    <meta name="description" content="Skolyozda schroth'un önemi">
+
+
+ 
+    <link href= "/public/css/style.css" rel="stylesheet" type="text/css" />
+    
+
+
+    <title>Skolyoz Terapistleri</title>
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+
+    <!--! header start  -->
+    <header class="container">
+        <nav>
+            <div class="logo">
+                <a href="#"> <br />SKOLYOZ <br />
+                    <hr>
+                    <hr> TERAPİSTLERİ
+                </a>
+
+                <text-align:left; <img src="/public/resimler/anamenü.jpg" align="left" width="200" height="105" />
+             </div>
+            
+              <%- include("../partials/menu") %> 
+            
+
+        </nav>
+    </header>
+    <!--! header end  -->
+
+    <!--! section start -->
+
+    <section class="container content">
+        <h1>Şehrindeki Skolyoz <br /> Terapistini bul.
+
+
+        </h1>
+
+        <br /> <img src="/public/resimler/anamenü.jpg" align="center" width="700" height="120" />
+        <p>Şehrinizi seçip skolyoz terapistleri için arama yapabilir, dilediğiniz fizyoterapist ile iletişime
+            geçebilirsiniz.
+
+        </p>
+        <div class="links">
+            <a href="http://localhost:1000/iletisim">İletişime Geç!</a>
+
+
+            <!--  <a href="#">Şehrindeki Skolyoz Terapistini bul</a>
+            
+
+             <div class="search-main"> 
+                <input type="text" class="tbox-search">
+                <a class="btn-search">
+                    <i class="fa fa-search"></i> 
+                </a>
+                -->
+            
+             <select class="form-control l-radius" name="sehir" style="width:165px"  id="sehirler"
+                value="">
+                <form method="POST" id="tableForm" action="getJson">
+
+                <option value="">Şehir seçiniz...</option>
+
+                <option value="Adana" id="01">ADANA</option>
+
+                <option value="ADIYAMAN" id="02">ADIYAMAN</option>
+
+                <option value="AFYONKARAHİSAR" İD="03">AFYONKARAHİSAR</option>
+
+                <option value="AĞRI" id="04">AĞRI</option>
+
+                <option value="AKSARAY" id="68">AKSARAY</option>
+
+                <option value="AMASYA" id="05">AMASYA</option>
+
+                <option value="Ankara" id="06">ANKARA</option>
+
+                <option value="Antalya" id="07">ANTALYA</option>
+
+                <option value="ARDAHAN" id="75">ARDAHAN</option>
+
+                <option value="ARTVİN" id="08">ARTVİN</option>
+
+                <option value="AYDIN" id="09">AYDIN</option>
+
+                <option value="BALIKESİR" id="10">BALIKESİR</option>
+
+                <option value="BARTIN" id="74">BARTIN </option>
+
+                <option value="BATMAN" id="72">BATMAN</option>
+
+                <option value="BAYBURT" id="69">BAYBURT</option>
+
+                <option value="BİLECİK" id="11">BİLECİK</option>
+
+                <option value="BİNGÖL" id="12">BİNGÖL</option>
+
+                <option value="BİTLİS" id="13">BİTLİS</option>
+
+                <option value="BOLU" id="14">BOLU</option>
+
+                <option value="BURDUR" id="15">BURDUR</option>
+
+                <option value="BURSA" id="16">BURSA</option>
+
+                <option value="ÇANAKKALE" id="17">ÇANAKKALE</option>
+
+                <option value="ÇANKIRI" id="18">ÇANKIRI</option>
+
+                <option value="ÇORUM" id="19">ÇORUM</option>
+
+                <option value="DENİZLİ" id="20">DENİZLİ</option>
+
+                <option value="DİYARBAKIR" id="21">DİYARBAKIR</option>
+
+                <option value="DÜZCE" id="81">DÜZCE</option>
+
+                <option value="EDİRNE" id="22">EDİRNE</option>
+
+                <option value="ELAZIĞ" id=23>ELAZIĞ</option>
+
+                <option value="ERZİNCAN" id="24">ERZİNCAN</option>
+
+                <option value="ERZURUM" id="25">ERZURUM</option>
+
+                <option value="ESKİŞEHİR" id="26">ESKİŞEHİR</option>
+
+                <option value="GAZİANTEP" id="27">GAZİANTEP</option>
+
+                <option value="GİRESUN" id="28">GİRESUN</option>
+
+                <option value="GÜMÜŞHANE" id="29">GÜMÜŞHANE</option>
+
+                <option value="HAKKARİ" id="30">HAKKARİ</option>
+
+                <option value="HATAY" id="31">HATAY</option>
+
+                <option value="IĞDIR" id="76">IĞDIR</option>
+
+                <option value="ISPARTA" id="32">ISPARTA</option>
+
+                <option value="İSTANBUL" id="34">İSTANBUL</option>
+
+                <option value="İZMİR" id="35">İZMİR</option>
+
+                <option value="KAHRAMANMARAŞ" id="46">KAHRAMANMARAŞ</option>
+
+                <option value="KARABÜK" id="78">KARABÜK</option>
+
+                <option value="KARAMAN" id="70">KARAMAN</option>
+
+                <option value="KARS" id="36">KARS</option>
+
+                <option value="KASTAMONU" id="37">KASTAMONU</option>
+
+                <option value="KAYSERİ" id="38">KAYSERİ</option>
+
+                <option value="KIRIKKALE" id="71">KIRIKKALE</option>
+
+                <option value="KIRKLARELİ" id="39">KIRKLARELİ</option>
+
+                <option value="KIRŞEHİR" id="40">KIRŞEHİR</option>
+
+                <option value="KİLİS" id="79">KİLİS</option>
+
+                <option value="KOCAELİ" id="41">KOCAELİ</option>
+
+                <option value="KONYA" id="42">KONYA</option>
+
+                <option value="KÜTAHYA" id="43">KÜTAHYA</option>
+
+                <option value="MALATYA" id="44">MALATYA</option>
+
+                <option value="MANİSA" id="45">MANİSA</option>
+
+                <option value="MARDİN" id="47">MARDİN</option>
+
+                <option value="MERSİN" id="33">MERSİN</option>
+
+                <option value="MUĞLA" id="48">MUĞLA</option>
+
+                <option value="MUŞ" id="49">MUŞ</option>
+
+                <option value="NEVŞEHİR" id="50">NEVŞEHİR</option>
+
+                <option value="NİĞDE" id="51">NİĞDE</option>
+
+                <option value="ORDU" id="52">ORDU</option>
+
+                <option value="OSMANİYE" id="80">OSMANİYE</option>
+
+                <option value="RİZE" id="53">RİZE</option>
+
+                <option value="SAKARYA" id="54">SAKARYA</option>
+
+                <option value="SAMSUN" id="55">SAMSUN</option>
+
+                <option value="SİİRT" id="56">SİİRT</option>
+
+                <option value="SİNOP" id="57">SİNOP</option>
+
+                <option value="SİVAS" id="58">SİVAS</option>
+
+                <option value="ŞANLIURFA" id="63">ŞANLIURFA</option>
+
+                <option value="ŞIRNAK" id="73">ŞIRNAK</option>
+
+                <option value="TEKİRDAĞ" id="59">TEKİRDAĞ</option>
+
+                <option value="TOKAT" id="60">TOKAT</option>
+
+                <option value="TRABZON" id="61">TRABZON</option>
+
+                <option value="TUNCELİ" id="62">TUNCELİ</option>
+
+                <option value="UŞAK" id="64">UŞAK</option>
+
+                <option value="VAN" id="65">VAN</option>
+
+                <option value="YALOVA" id="77">YALOVA</option>
+
+                <option value="YOZGAT" id="66">YOZGAT</option>
+
+                <option value="ZONGULDAK" id="67">ZONGULDAK</option>
+
+
+            </select>
+            </form>
+        </div>
+    </section>
+    <!--! section end -->
+    <section class="main py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-7">
+               
+
+
+                    <a href="http://localhost:1000/search">  
+                  <button class="btn2 mt-5" id="btn_ara">ARA</button>
+                      </a>
+                   
+                </div>
+            </div>
+      </div>
+
+    </section>
+
+</body>
+
+<script src="index.js"></script>
+<script src="app.js"></script>
+</html>

@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <style>
+    
+      body {
+        background-image: url('/public/resimler/nedir.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family:  cursive;
+        font-weight: bold;
+      }
+
+      header {
+    height: 100px;
+   
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header nav .logo a {
+    color: rgba(249, 249, 249, 0.912);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    column-gap: 30px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+nav ul li a:hover {
+    color: #57c4da;
+}
+
+nav .menu {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+}
+    </style>
+  
+  </head>
+
+  <body>
+
+    <header class="container">
+        <nav>
+
+
+            <%- include("../partials/menu")%>
+                    
+                    
+
+        </nav>
+    </header>
+    
+    <h2><br> <br/>   <br/> SKOLYOZ NEDİR?</h2>
+    <p> 
+    Skolyoz, omurganın olması gereken anatomik hatlardan uzaklaşarak, ilerleyen evrelerde ciddi duruş bozukluklarına neden olduğu üç boyutlu bir omurga deformasyonudur. Scoliosis Research Society (SRS)’e göre Cobb açısı 10 derecenin üzerinde olan omurga eğrileri skolyoz olarak değerlendirilir. Skolyoz, en sık karşılaşılan spinal deformitelerden biri olup çocuklarda görülme sıklığı %3’tür.
+        <br/>
+        <br/>
+        <h2>SKOLYOZ BELİRTİLERİ </h2>  
+ Skolyoz, uzun dönem hiçbir klinik bulguya neden olmadan ilerleyebilir. Skolyozda vücudun dışından fark edilebilecek bazı değişiklikler;
+<br/>
+Başın orta hatta olmaması.
+<br/>
+Bir omzun diğerinden yukarıda olması.
+<br/>
+Kürek kemiklerinden birinin daha belirgin olması.
+<br/>
+Bel çukurlarından birinin daha derin görünmesi.
+<br/>
+Kalçanın orta hattan yana kayması.
+<br/>
+Bireyde bu belirtilerden bir ya da daha fazlasının gözlemlenmesi şüphe sebebidir ve vakit kaybetmeden bir ortopediste danışılması gerekir.
+         </p>
+  </body>
+</html>
