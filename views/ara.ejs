@@ -1,21 +1,46 @@
+
+
+
 <html>
 <head>
     <title></title>
-    <link href= "/public/css/iletisim.css" rel="stylesheet" type="text/css" />
+    <link href= "/public/css/ara.css" rel="stylesheet" type="text/css" />
 </head>
  
 <body>
-    <div class="container">
-        <form id="contact" action="/" method="get">
-            <h1>FİZYOTERAPİSTLER</h1> 
-           <ul>
-            
-           </ul>
-        </form>
-    </div>
+    <ul>
+       <%  doctors.forEach(function(doctors){ %> 
+            <div class="container" >
+                <form id="contact" >
+                             <h1> FİZYOTERAPİST</h1>
+                          <div class="form-control1">
+                            <h3> Ad:  <%= doctors.name %></h3>
+                          </div>
+                          <div class="form-control2">
+                             <h3> Soyad:  <%= doctors.surname %></h3>
+                          </div>
+                          <div class="form-control3">
+                             <h3> Telefon: <%= doctors.telephone %></h3>
+                          </div>
+                          <div class="form-control4">
+                            <h3> Lokasyon: <%= doctors.location %></h3>
+                          </div>
+                          <div class="form-control5">
+                             <h3>Sertfika Türü: <%= doctors.certificate %></h3>
+                          </div>
+                          <div class="form-control6">
+                            <h3><%= doctors.statement %></h3>
+                         </div>
 
-
+ 
+                </form>
+            </div>
+           <% }); %>
+         </ul>
 </body>
+
 <script src="/app.js"> </script>
 <script src="../models/doctors.js"> </script>
+
+
 </html>

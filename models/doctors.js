@@ -17,9 +17,8 @@ surname: {
     type: String,
     require: true
 },
-
 telephone: {
-    type: Number,
+    type: String,
     require: true
 
 },
@@ -30,6 +29,9 @@ location:{
 certificate:{
     type: String,
     require:true
+},
+statement:{
+    type: String,
 }
 
 }, {timestamps: true});

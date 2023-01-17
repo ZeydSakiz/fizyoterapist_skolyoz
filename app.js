@@ -11,7 +11,7 @@ import ileti from './models/iletisimBilgi.js';
 
 const app = express();
 //deneme
-
+// kullalnıcının girdiği datayı obje olarak yakalamızı sağlayan paket 
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
@@ -61,9 +61,7 @@ app.get('/iletiler',(req,res) => {
 
 
 
- // veri tabanına kayıt yapma denemesi..
- // sütun başlıkları eksik bunu çalıştırmadan önce düzenle
-//çözemedin hala /add e gidince hata veriyor " Cannot access 'doctor' before initialization" hatası
+ // veri tabanına kayıt yapma denemesi
  /*
 app.get('/add',(req,res)=>{
        const doctor = new doctor({
@@ -117,9 +115,15 @@ app.get('/single', (req,res) =>{
 //şehir bazlı doktor araması callback fonksiyon içindeki  find methodu kriterleri belirlemesiyle yapıldı
 
 //index.ejs den ara bbutonunun yönlendirmesini düzenle(/search) şu anda ara butonunu ara.ejs yönlendirdiğin için kaldırdın
-
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
+// html de selectten çektiğin veriyi burada kullandın...
+// indexteki şehir isimlerini düzenle ya da gi kullan ama düzenlemeyi dşünüyorsun hatırlatma...
+/*
 app.get('/search' ,(req,res) => {
-doctor.find({city:"Ankara"})
+    
+doctor.find({city:req.query.sehir})
 .then((result) => {
     res.send(result);
 })
@@ -129,15 +133,44 @@ doctor.find({city:"Ankara"})
 
 
 })
+*/
 
-//veri görselleştirme deneme
+// verileri html e gönderme denemesi...
+
+app.get('/search' ,(req,res) => {
+    
+    doctor.find({city:req.query.sehir})
+    .then((doctors) => {
+        res.render('../views/ara.ejs' ,{doctors:doctors});
+    })
+    .catch((err) => {
+        console.log(err);
+    
+    })
+
+    })
 
 
 
 
+/*
+//combobasxtaki değere göre veri arama
+/bu formata göre denendi ama başarılı bi sonuca varamadın
+
+app.get("/ara", (req,res) => {
+if(req.query.sehir){
+const regex = new RegExp(escapeRegex(req.query.sehir),'gi');
+doctor.find({"city":regex})
+console.log(regex)
+
+res.render('ara')
+
+}
+}
+*/
 
 
-//ejs ayarlaması
+//view  engine adının ejs olarak ayarlanmsaı ayarlaması
 app.set('view engine', 'ejs');
 
 
@@ -175,6 +208,21 @@ app.post('/post/content',(req,res) => {
     
 });
 
+/*
+app.post('/post/city',(req,res) => {
+   
+        doctor.find({city:req.body})
+        .then((result) => {
+            res.send(result);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+        res.redirect('/ara')
+        
+      
+ });
+ */
 
 
 app.listen(port, ()=>{
